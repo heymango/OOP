@@ -10,8 +10,8 @@ class inf_int
 public:
 	char* digits;
 	unsigned int length;
-	bool thesign;   
-	
+	bool thesign;
+
 
 	inf_int();               // assign 0 as a default value
 	inf_int(int);
@@ -22,6 +22,9 @@ public:
 	inf_int& operator=(const inf_int&); // assignment operator
 
 	void Add(const char num, const unsigned int index);
+	void Sub(const char num, const unsigned int index);
+	bool Add2(const char num, const unsigned int index);
+	int Mul(const char num, const unsigned int index);
 
 	friend bool operator==(const inf_int&, const inf_int&);
 	friend bool operator!=(const inf_int&, const inf_int&);
@@ -30,10 +33,10 @@ public:
 
 	friend inf_int operator+(const inf_int&, const inf_int&);
 	friend inf_int operator-(const inf_int&, const inf_int&);
-	//friend inf_int operator*(const inf_int&, const inf_int&);
+	friend inf_int operator*(const inf_int&, const inf_int&);
 	// friend inf_int operator/(const inf_int& , const inf_int&); // not required
 	friend ostream& operator<<(ostream&, const inf_int&);
-	 //friend istream& operator>>(istream& , inf_int&);    // not required
+	//friend istream& operator>>(istream& , inf_int&);    // not required
 };
 
 #endif
